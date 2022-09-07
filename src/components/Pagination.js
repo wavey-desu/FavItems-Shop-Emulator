@@ -11,7 +11,7 @@ export default function Pagination({limit, setLimit, setSkip}) {
 
   return (
     <div className='paginationCont'>
-        <p>page 1 of {n}</p>
+        <p>page {n} of {(100/limit)}</p>
 
         <div className="pageButtons">
             {skip.map((skipper,index) =>(
@@ -20,10 +20,10 @@ export default function Pagination({limit, setLimit, setSkip}) {
         </div>
 
         <div className="pageLimitCont">
-            <p># of items </p>
-            <button onClick={() => {setLimit(20); setN(1)}}>20</button>
-            <button onClick={() => {setLimit(50); setN(1)}}>50</button>
-            <button onClick={() => {setLimit(100); setN(1)}}>100</button>
+            <p>items in page:</p>
+            <button onClick={() => {setLimit(20); setSkip(0); setN(1)}}>20</button>
+            <button onClick={() => {setLimit(50); setSkip(0); setN(1)}}>50</button>
+            <button onClick={() => {setLimit(100); setSkip(0); setN(1)}}>100</button>
         </div>
     </div>
   )

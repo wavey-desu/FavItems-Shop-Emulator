@@ -34,15 +34,48 @@ header{
   height: 10%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: cadetblue;
 }
-
+header h1{
+  font-size: 7vh;
+}
+header button{
+  position: absolute;
+  right: 5%;
+  background-color: transparent;
+  border: none;
+  width: 7vh;
+  height: 7vh;
+  font-size: 6vh;
+  color: red;
+}
+header button:hover{
+  cursor: pointer;
+}
+header button span{
+  position: absolute;
+  font-size: 2.5vh;
+  font-weight: 700;
+  top: -.5vh;
+  width: 3vh;
+  right: 0;
+  color: cadetblue;
+  background-color: #ffffff;
+  border-radius: 5vw;
+  transform: scale(10%);
+  transition: all .25s  ease;
+  animation: favN .25s ease forwards;
+}
+@keyframes favN {
+  to{transform: scale(100%);}
+}
 .results{
   width: 98%;
   height: 80vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 1vw;
   display: flex;
   flex-direction: row;
@@ -61,11 +94,23 @@ header{
   right: -45%;
   top: 10%;
   width: 45%;
-  height: 85vh;
-  background-color: red;
+  height: 90vh;
+  background-color: #ffffffd8;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   transition: right .5s ease;
+  border-left: 1vh cadetblue solid;
 }
 
 .showFav{
   right: 0;
+}
+button{
+  transition: all .25s ease;
+}
+button:active{
+  transform: translateY(4%);
+}
+button:hover{
+  cursor: pointer;
 }

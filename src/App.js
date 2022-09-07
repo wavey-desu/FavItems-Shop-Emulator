@@ -20,7 +20,7 @@ function App() {
     if (data){
       setItems(prevItems => {return data.products})
     }
-  },[url,data,limit,skip])
+  },[data,limit,skip])
 
   const handleFavClick = (i) => { //handle favorite icon product click
     const favItemsTemp = [...favItems,i] 
@@ -28,20 +28,20 @@ function App() {
     setFavItems(nodupes)
   }
 
-  const handleFavDelete = (i) => {
-    const favItemsTemp = favItems.filter( fitem => {return fitem.title !== i.title})
+  const handleFavDelete = (i) => { //handle favorite item delete click
+    const favItemsTemp = favItems.filter( fitem => {return fitem.title !== i.title}) //set tem favitems array and remove matching item
     setFavItems(favItemsTemp)
   }
 
-  console.log(favItems)
+  // console.log(favItems)
   return (
-    <div className="App">
-      <header>
+    <div  className="App">
+      <header >
         <h1>Products</h1> 
-        <button onClick={() => setShowFav(!showFav)}><i class="fa-solid fa-heart"></i></button>
+        <button onClick={() => setShowFav(!showFav)}><i class="fa-solid fa-heart"></i><span>{favItems.length}</span></button>
       </header>
       
-      <div className="results">
+      <div onClick={() => setShowFav(false)} className="results">
         {items && !isPending && !error && items.map(item => (
           <ProductCard
             handleFavClick = {handleFavClick}
@@ -58,6 +58,7 @@ function App() {
       <div className={showFav ? "favSection showFav": "favSection"}>
           <FavDrawer
             items = {favItems}
+            setFavItems = {setFavItems}
             handleFavDelete = {handleFavDelete}
            />
       </div>

@@ -1,6 +1,7 @@
 .paginationCont{
-    width: 80%;
+    width: 97%;
     height: 5%;
+    margin-top: -2.5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,5 +12,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 20%;
+    /* width: 20%; */
+}
+.pageButtons{
+    margin-left: 10vw;
+}
+.paginationCont button{
+    width: 4.5vh;
+    height: 4vh;
+    margin-inline: 1vh;
+    border: none;
+    border-radius: 2vh;
+    background-color: cadetblue;
+    font-size: 2.25vh;
+    font-weight: 500;
+    transition: all .2s ease;
+}
+.paginationCont button:hover{
+    cursor: pointer;
+    background-color: rgb(68, 115, 116);
+}
+.paginationCont button:active{
+    transform: translateY(4%);
 }

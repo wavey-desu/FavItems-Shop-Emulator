@@ -1,0 +1,67 @@
+
+.favDrawer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vh;
+    width: 98%;
+    height: 98%;
+}
+.favDrawer h1{
+    font-size: 6vh;
+}
+.clearFavs{
+    position: absolute;
+    right: 8%;
+    top: 1.5%;
+    width: 12vh;
+    height: 5vh;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 2vh;
+    font-size: 2.5vh;
+    font-weight: 500;
+}
+.favItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vh;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.favItemsCont{
+    position: relative;
+    width: 95%;
+    height: 8.5vh;
+    border: .2vh cadetblue solid;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    background-color: #ffffff;
+}
+.favItemsCont h3{
+    font-size: 4vh;
+}
+.favItemsCont img{
+    width: 3vw;
+    height: 2vw;
+}
+.favItemsCont button{
+    width: 15%;
+    height: 120%;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 2vh;
+    font-size: 2vh;
+    font-weight: 500;
+}
+.favDrawer button:hover{
+    background-color: rgb(115, 193, 196);
+}
