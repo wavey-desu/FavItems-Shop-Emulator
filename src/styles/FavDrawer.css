@@ -48,10 +48,11 @@
 }
 .favItemsCont h3{
     font-size: 4vh;
+    color: rgb(38, 65, 66);
 }
 .favItemsCont img{
-    width: 3vw;
-    height: 2vw;
+    width: 3.5vw;
+    height: 2.5vw;
 }
 .favItemsCont button{
     width: 15%;

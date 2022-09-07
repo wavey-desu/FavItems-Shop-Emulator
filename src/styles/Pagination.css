@@ -28,6 +28,10 @@
     font-weight: 500;
     transition: all .2s ease;
 }
+.paginationCont p{
+    font-size: 2.5vh;
+    color: cadetblue;
+}
 .paginationCont button:hover{
     cursor: pointer;
     background-color: rgb(68, 115, 116);
