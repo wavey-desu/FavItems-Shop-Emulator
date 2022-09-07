@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 // Components
 import {useFetch} from './components/useFetch'
 import ProductCard from './components/ProductCard';
@@ -38,7 +40,7 @@ function App() {
     <div  className="App">
       <header >
         <h1>Products</h1> 
-        <button onClick={() => setShowFav(!showFav)}><i class="fa-solid fa-heart"></i><span>{favItems.length}</span></button>
+        <button onClick={() => setShowFav(!showFav)}><FontAwesomeIcon icon={ faHeart } /><span>{favItems.length}</span></button>
       </header>
       
       <div onClick={() => setShowFav(false)} className="results">

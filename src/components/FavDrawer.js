@@ -8,8 +8,8 @@ export default function FavDrawer({items, handleFavDelete, setFavItems}) {
         <button onClick={() => setFavItems([])} className='clearFavs'>Clear all</button>
 
         <div className="favItems">
-            {items && items.map(item => (
-                <div key={items.id} className="favItemsCont">
+            {items && items.map((item,index) => (
+                <div key={index} className="favItemsCont">
                     <img src={item.images[item.images.length - 1]} alt="product thumb" />
                     <h3>{item.title}</h3>
                     <button onClick={() => handleFavDelete(item)}>Remove</button>
